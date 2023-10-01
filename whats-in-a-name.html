@@ -3124,22 +3124,22 @@ C:\Users\Spencer\AppData\Roaming\Python\Python311\site-packages\altair\utils\cor
 <div id="q1-chart" class="cell-output cell-output-display" data-execution_count="4">
 
 <style>
-#altair-viz-c01c8ea967884464aa82e12c13b2add2.vega-embed {
+#altair-viz-8cb3d9f870234ef48bbb0a8619dd00b1.vega-embed {
 width: 100%;
 display: flex;
 }
-#altair-viz-c01c8ea967884464aa82e12c13b2add2.vega-embed details,
-#altair-viz-c01c8ea967884464aa82e12c13b2add2.vega-embed details summary {
+#altair-viz-8cb3d9f870234ef48bbb0a8619dd00b1.vega-embed details,
+#altair-viz-8cb3d9f870234ef48bbb0a8619dd00b1.vega-embed details summary {
 position: relative;
 }
 </style>
-<div id="altair-viz-c01c8ea967884464aa82e12c13b2add2"></div>
+<div id="altair-viz-8cb3d9f870234ef48bbb0a8619dd00b1"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-c01c8ea967884464aa82e12c13b2add2") {
-      outputDiv = document.getElementById("altair-viz-c01c8ea967884464aa82e12c13b2add2");
+    if (outputDiv.id !== "altair-viz-8cb3d9f870234ef48bbb0a8619dd00b1") {
+      outputDiv = document.getElementById("altair-viz-8cb3d9f870234ef48bbb0a8619dd00b1");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -3319,22 +3319,22 @@ position: relative;
 <div id="q2-chart" class="cell-output cell-output-display" data-execution_count="7">
 
 <style>
-#altair-viz-4f7ad55b5fd84d6ebea93f925948fb38.vega-embed {
+#altair-viz-e3181016216141cb9eaa0718e23dc984.vega-embed {
 width: 100%;
 display: flex;
 }
-#altair-viz-4f7ad55b5fd84d6ebea93f925948fb38.vega-embed details,
-#altair-viz-4f7ad55b5fd84d6ebea93f925948fb38.vega-embed details summary {
+#altair-viz-e3181016216141cb9eaa0718e23dc984.vega-embed details,
+#altair-viz-e3181016216141cb9eaa0718e23dc984.vega-embed details summary {
 position: relative;
 }
 </style>
-<div id="altair-viz-4f7ad55b5fd84d6ebea93f925948fb38"></div>
+<div id="altair-viz-e3181016216141cb9eaa0718e23dc984"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-4f7ad55b5fd84d6ebea93f925948fb38") {
-      outputDiv = document.getElementById("altair-viz-4f7ad55b5fd84d6ebea93f925948fb38");
+    if (outputDiv.id !== "altair-viz-e3181016216141cb9eaa0718e23dc984") {
+      outputDiv = document.getElementById("altair-viz-e3181016216141cb9eaa0718e23dc984");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -3472,22 +3472,107 @@ position: relative;
 </section>
 <section id="question-task-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-task-3">QUESTION | TASK 3</h2>
-<p><strong>COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE</strong></p>
+<p>Mary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names. What trends do you notice?</p>
 <p><em>type your results and analysis here</em></p>
-<div id="q3" class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="9">
 <details>
 <summary>Read and format data</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>christian_names <span class="op">=</span> dat[[<span class="st">&#39;name&#39;</span>, <span class="st">&#39;year&#39;</span>, <span class="st">&#39;Total&#39;</span>]].query(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;name == &quot;Mary&quot; or name == &quot;Martha&quot; or name == &quot;Peter&quot; or name == &quot;Paul&quot;&#39;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>christian_names <span class="op">=</span> christian_names.query(<span class="st">&#39;year &gt;= 1900 and year &lt;= 2000&#39;</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> alt.Chart(christian_names).mark_line().encode(</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="st">&#39;year:N&#39;</span>,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="st">&#39;Total&#39;</span>,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> <span class="st">&#39;name&#39;</span>,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>chart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\Spencer\AppData\Roaming\Python\Python311\site-packages\altair\utils\core.py:410: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)</code></pre>
+</div>
+<div id="q3" class="cell-output cell-output-display" data-execution_count="9">
+
+<style>
+#altair-viz-f167dae14020404abd04c46108a987e1.vega-embed {
+width: 100%;
+display: flex;
+}
+#altair-viz-f167dae14020404abd04c46108a987e1.vega-embed details,
+#altair-viz-f167dae14020404abd04c46108a987e1.vega-embed details summary {
+position: relative;
+}
+</style>
+<div id="altair-viz-f167dae14020404abd04c46108a987e1"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-f167dae14020404abd04c46108a987e1") {
+      outputDiv = document.getElementById("altair-viz-f167dae14020404abd04c46108a987e1");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.14.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.14.1"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-61f8a90771bc6d5b5ceb67378f5c27d0"}, "mark": {"type": "line"}, "encoding": {"color": {"field": "name", "type": "nominal"}, "x": {"field": "year", "type": "nominal"}, "y": {"field": "Total", "type": "quantitative"}}, "$schema": "https://vega.github.io/schema/vega-lite/v5.14.1.json", "datasets": {"data-61f8a90771bc6d5b5ceb67378f5c27d0": [{"name": "Martha", "year": 1910, "Total": 2837.0}, {"name": "Martha", "year": 1911, "Total": 3008.0}, {"name": "Martha", "year": 1912, "Total": 3902.0}, {"name": "Martha", "year": 1913, "Total": 4527.0}, {"name": "Martha", "year": 1914, "Total": 5430.0}, {"name": "Martha", "year": 1915, "Total": 7217.0}, {"name": "Martha", "year": 1916, "Total": 7606.0}, {"name": "Martha", "year": 1917, "Total": 8259.0}, {"name": "Martha", "year": 1918, "Total": 8339.0}, {"name": "Martha", "year": 1919, "Total": 8318.0}, {"name": "Martha", "year": 1920, "Total": 8705.0}, {"name": "Martha", "year": 1921, "Total": 9254.0}, {"name": "Martha", "year": 1922, "Total": 9018.0}, {"name": "Martha", "year": 1923, "Total": 8731.0}, {"name": "Martha", "year": 1924, "Total": 9163.0}, {"name": "Martha", "year": 1925, "Total": 8757.0}, {"name": "Martha", "year": 1926, "Total": 8557.0}, {"name": "Martha", "year": 1927, "Total": 8088.5}, {"name": "Martha", "year": 1928, "Total": 8245.0}, {"name": "Martha", "year": 1929, "Total": 7381.5}, {"name": "Martha", "year": 1930, "Total": 7830.0}, {"name": "Martha", "year": 1931, "Total": 7248.5}, {"name": "Martha", "year": 1932, "Total": 7329.5}, {"name": "Martha", "year": 1933, "Total": 6905.0}, {"name": "Martha", "year": 1934, "Total": 7603.0}, {"name": "Martha", "year": 1935, "Total": 7383.5}, {"name": "Martha", "year": 1936, "Total": 7176.5}, {"name": "Martha", "year": 1937, "Total": 7645.0}, {"name": "Martha", "year": 1938, "Total": 8017.5}, {"name": "Martha", "year": 1939, "Total": 7956.5}, {"name": "Martha", "year": 1940, "Total": 8204.0}, {"name": "Martha", "year": 1941, "Total": 8250.5}, {"name": "Martha", "year": 1942, "Total": 9514.0}, {"name": "Martha", "year": 1943, "Total": 9700.0}, {"name": "Martha", "year": 1944, "Total": 9329.0}, {"name": "Martha", "year": 1945, "Total": 8744.0}, {"name": "Martha", "year": 1946, "Total": 9763.0}, {"name": "Martha", "year": 1947, "Total": 10651.0}, {"name": "Martha", "year": 1948, "Total": 10006.0}, {"name": "Martha", "year": 1949, "Total": 9508.0}, {"name": "Martha", "year": 1950, "Total": 9840.0}, {"name": "Martha", "year": 1951, "Total": 9598.0}, {"name": "Martha", "year": 1952, "Total": 9699.0}, {"name": "Martha", "year": 1953, "Total": 9262.0}, {"name": "Martha", "year": 1954, "Total": 8585.0}, {"name": "Martha", "year": 1955, "Total": 7930.0}, {"name": "Martha", "year": 1956, "Total": 7703.0}, {"name": "Martha", "year": 1957, "Total": 7365.0}, {"name": "Martha", "year": 1958, "Total": 6393.5}, {"name": "Martha", "year": 1959, "Total": 6439.0}, {"name": "Martha", "year": 1960, "Total": 5504.5}, {"name": "Martha", "year": 1961, "Total": 5712.0}, {"name": "Martha", "year": 1962, "Total": 5164.0}, {"name": "Martha", "year": 1963, "Total": 4879.0}, {"name": "Martha", "year": 1964, "Total": 4448.0}, {"name": "Martha", "year": 1965, "Total": 3793.0}, {"name": "Martha", "year": 1966, "Total": 3267.0}, {"name": "Martha", "year": 1967, "Total": 2708.0}, {"name": "Martha", "year": 1968, "Total": 2557.0}, {"name": "Martha", "year": 1969, "Total": 2399.0}, {"name": "Martha", "year": 1970, "Total": 2346.0}, {"name": "Martha", "year": 1971, "Total": 2167.0}, {"name": "Martha", "year": 1972, "Total": 1718.0}, {"name": "Martha", "year": 1973, "Total": 1698.0}, {"name": "Martha", "year": 1974, "Total": 1811.0}, {"name": "Martha", "year": 1975, "Total": 1768.0}, {"name": "Martha", "year": 1976, "Total": 1580.0}, {"name": "Martha", "year": 1977, "Total": 1572.0}, {"name": "Martha", "year": 1978, "Total": 1469.0}, {"name": "Martha", "year": 1979, "Total": 1420.0}, {"name": "Martha", "year": 1980, "Total": 1525.0}, {"name": "Martha", "year": 1981, "Total": 1549.0}, {"name": "Martha", "year": 1982, "Total": 1270.5}, {"name": "Martha", "year": 1983, "Total": 1166.0}, {"name": "Martha", "year": 1984, "Total": 969.5}, {"name": "Martha", "year": 1985, "Total": 1057.0}, {"name": "Martha", "year": 1986, "Total": 1134.0}, {"name": "Martha", "year": 1987, "Total": 1117.0}, {"name": "Martha", "year": 1988, "Total": 969.0}, {"name": "Martha", "year": 1989, "Total": 1049.5}, {"name": "Martha", "year": 1990, "Total": 1222.0}, {"name": "Martha", "year": 1991, "Total": 1096.0}, {"name": "Martha", "year": 1992, "Total": 955.5}, {"name": "Martha", "year": 1993, "Total": 1027.0}, {"name": "Martha", "year": 1994, "Total": 928.0}, {"name": "Martha", "year": 1995, "Total": 887.0}, {"name": "Martha", "year": 1996, "Total": 849.0}, {"name": "Martha", "year": 1997, "Total": 830.0}, {"name": "Martha", "year": 1998, "Total": 737.0}, {"name": "Martha", "year": 1999, "Total": 693.0}, {"name": "Martha", "year": 2000, "Total": 741.0}, {"name": "Mary", "year": 1910, "Total": 17568.5}, {"name": "Mary", "year": 1911, "Total": 19058.5}, {"name": "Mary", "year": 1912, "Total": 24685.5}, {"name": "Mary", "year": 1913, "Total": 27013.5}, {"name": "Mary", "year": 1914, "Total": 32734.5}, {"name": "Mary", "year": 1915, "Total": 41425.0}, {"name": "Mary", "year": 1916, "Total": 43642.5}, {"name": "Mary", "year": 1917, "Total": 44589.0}, {"name": "Mary", "year": 1918, "Total": 49738.5}, {"name": "Mary", "year": 1919, "Total": 47296.0}, {"name": "Mary", "year": 1920, "Total": 45928.5}, {"name": "Mary", "year": 1921, "Total": 49070.0}, {"name": "Mary", "year": 1922, "Total": 48514.0}, {"name": "Mary", "year": 1923, "Total": 45749.5}, {"name": "Mary", "year": 1924, "Total": 44981.0}, {"name": "Mary", "year": 1925, "Total": 45006.5}, {"name": "Mary", "year": 1926, "Total": 42416.5}, {"name": "Mary", "year": 1927, "Total": 43645.5}, {"name": "Mary", "year": 1928, "Total": 37597.5}, {"name": "Mary", "year": 1929, "Total": 36396.5}, {"name": "Mary", "year": 1930, "Total": 38872.5}, {"name": "Mary", "year": 1931, "Total": 34680.0}, {"name": "Mary", "year": 1932, "Total": 35923.5}, {"name": "Mary", "year": 1933, "Total": 32867.5}, {"name": "Mary", "year": 1934, "Total": 34809.5}, {"name": "Mary", "year": 1935, "Total": 32865.5}, {"name": "Mary", "year": 1936, "Total": 31045.0}, {"name": "Mary", "year": 1937, "Total": 33171.5}, {"name": "Mary", "year": 1938, "Total": 34026.5}, {"name": "Mary", "year": 1939, "Total": 32546.0}, {"name": "Mary", "year": 1940, "Total": 35422.5}, {"name": "Mary", "year": 1941, "Total": 35127.0}, {"name": "Mary", "year": 1942, "Total": 37619.0}, {"name": "Mary", "year": 1943, "Total": 40505.5}, {"name": "Mary", "year": 1944, "Total": 39509.5}, {"name": "Mary", "year": 1945, "Total": 38813.0}, {"name": "Mary", "year": 1946, "Total": 45337.5}, {"name": "Mary", "year": 1947, "Total": 51053.0}, {"name": "Mary", "year": 1948, "Total": 50828.0}, {"name": "Mary", "year": 1949, "Total": 47835.0}, {"name": "Mary", "year": 1950, "Total": 53791.0}, {"name": "Mary", "year": 1951, "Total": 48928.5}, {"name": "Mary", "year": 1952, "Total": 49898.5}, {"name": "Mary", "year": 1953, "Total": 45603.0}, {"name": "Mary", "year": 1954, "Total": 48678.5}, {"name": "Mary", "year": 1955, "Total": 46351.0}, {"name": "Mary", "year": 1956, "Total": 45111.0}, {"name": "Mary", "year": 1957, "Total": 43334.0}, {"name": "Mary", "year": 1958, "Total": 39392.0}, {"name": "Mary", "year": 1959, "Total": 39242.0}, {"name": "Mary", "year": 1960, "Total": 36910.5}, {"name": "Mary", "year": 1961, "Total": 33353.5}, {"name": "Mary", "year": 1962, "Total": 31908.5}, {"name": "Mary", "year": 1963, "Total": 31314.5}, {"name": "Mary", "year": 1964, "Total": 29094.0}, {"name": "Mary", "year": 1965, "Total": 25823.0}, {"name": "Mary", "year": 1966, "Total": 23328.5}, {"name": "Mary", "year": 1967, "Total": 20413.5}, {"name": "Mary", "year": 1968, "Total": 18096.5}, {"name": "Mary", "year": 1969, "Total": 16045.0}, {"name": "Mary", "year": 1970, "Total": 15333.0}, {"name": "Mary", "year": 1971, "Total": 14606.5}, {"name": "Mary", "year": 1972, "Total": 12914.5}, {"name": "Mary", "year": 1973, "Total": 11429.5}, {"name": "Mary", "year": 1974, "Total": 11398.0}, {"name": "Mary", "year": 1975, "Total": 9916.0}, {"name": "Mary", "year": 1976, "Total": 9941.5}, {"name": "Mary", "year": 1977, "Total": 9936.5}, {"name": "Mary", "year": 1978, "Total": 9057.5}, {"name": "Mary", "year": 1979, "Total": 9605.0}, {"name": "Mary", "year": 1980, "Total": 10730.5}, {"name": "Mary", "year": 1981, "Total": 10692.0}, {"name": "Mary", "year": 1982, "Total": 9912.5}, {"name": "Mary", "year": 1983, "Total": 9345.0}, {"name": "Mary", "year": 1984, "Total": 8916.5}, {"name": "Mary", "year": 1985, "Total": 8269.5}, {"name": "Mary", "year": 1986, "Total": 7938.5}, {"name": "Mary", "year": 1987, "Total": 7402.5}, {"name": "Mary", "year": 1988, "Total": 7992.5}, {"name": "Mary", "year": 1989, "Total": 8127.5}, {"name": "Mary", "year": 1990, "Total": 8308.0}, {"name": "Mary", "year": 1991, "Total": 8400.0}, {"name": "Mary", "year": 1992, "Total": 8454.0}, {"name": "Mary", "year": 1993, "Total": 7891.5}, {"name": "Mary", "year": 1994, "Total": 7746.0}, {"name": "Mary", "year": 1995, "Total": 7438.0}, {"name": "Mary", "year": 1996, "Total": 6946.0}, {"name": "Mary", "year": 1997, "Total": 6627.0}, {"name": "Mary", "year": 1998, "Total": 6434.0}, {"name": "Mary", "year": 1999, "Total": 6360.0}, {"name": "Mary", "year": 2000, "Total": 6184.0}, {"name": "Paul", "year": 1910, "Total": 1998.0}, {"name": "Paul", "year": 1911, "Total": 2384.0}, {"name": "Paul", "year": 1912, "Total": 4777.0}, {"name": "Paul", "year": 1913, "Total": 5962.0}, {"name": "Paul", "year": 1914, "Total": 6966.5}, {"name": "Paul", "year": 1915, "Total": 9209.0}, {"name": "Paul", "year": 1916, "Total": 10284.5}, {"name": "Paul", "year": 1917, "Total": 10534.0}, {"name": "Paul", "year": 1918, "Total": 9890.0}, {"name": "Paul", "year": 1919, "Total": 9913.5}, {"name": "Paul", "year": 1920, "Total": 10958.5}, {"name": "Paul", "year": 1921, "Total": 11251.5}, {"name": "Paul", "year": 1922, "Total": 10907.0}, {"name": "Paul", "year": 1923, "Total": 11341.5}, {"name": "Paul", "year": 1924, "Total": 11553.5}, {"name": "Paul", "year": 1925, "Total": 12626.5}, {"name": "Paul", "year": 1926, "Total": 12262.0}, {"name": "Paul", "year": 1927, "Total": 11203.0}, {"name": "Paul", "year": 1928, "Total": 9650.5}, {"name": "Paul", "year": 1929, "Total": 10022.5}, {"name": "Paul", "year": 1930, "Total": 10493.0}, {"name": "Paul", "year": 1931, "Total": 9812.0}, {"name": "Paul", "year": 1932, "Total": 11379.0}, {"name": "Paul", "year": 1933, "Total": 11324.5}, {"name": "Paul", "year": 1934, "Total": 10642.0}, {"name": "Paul", "year": 1935, "Total": 12450.5}, {"name": "Paul", "year": 1936, "Total": 11121.5}, {"name": "Paul", "year": 1937, "Total": 12269.0}, {"name": "Paul", "year": 1938, "Total": 12690.5}, {"name": "Paul", "year": 1939, "Total": 12685.5}, {"name": "Paul", "year": 1940, "Total": 13382.0}, {"name": "Paul", "year": 1941, "Total": 13725.5}, {"name": "Paul", "year": 1942, "Total": 15335.0}, {"name": "Paul", "year": 1943, "Total": 16520.5}, {"name": "Paul", "year": 1944, "Total": 16654.0}, {"name": "Paul", "year": 1945, "Total": 16997.0}, {"name": "Paul", "year": 1946, "Total": 16823.5}, {"name": "Paul", "year": 1947, "Total": 18934.0}, {"name": "Paul", "year": 1948, "Total": 17120.5}, {"name": "Paul", "year": 1949, "Total": 20309.0}, {"name": "Paul", "year": 1950, "Total": 21763.0}, {"name": "Paul", "year": 1951, "Total": 21399.0}, {"name": "Paul", "year": 1952, "Total": 22197.5}, {"name": "Paul", "year": 1953, "Total": 25497.0}, {"name": "Paul", "year": 1954, "Total": 25662.5}, {"name": "Paul", "year": 1955, "Total": 24818.5}, {"name": "Paul", "year": 1956, "Total": 24852.0}, {"name": "Paul", "year": 1957, "Total": 24897.5}, {"name": "Paul", "year": 1958, "Total": 21623.5}, {"name": "Paul", "year": 1959, "Total": 21464.5}, {"name": "Paul", "year": 1960, "Total": 21377.0}, {"name": "Paul", "year": 1961, "Total": 20980.5}, {"name": "Paul", "year": 1962, "Total": 20155.0}, {"name": "Paul", "year": 1963, "Total": 21904.5}, {"name": "Paul", "year": 1964, "Total": 19928.5}, {"name": "Paul", "year": 1965, "Total": 20051.5}, {"name": "Paul", "year": 1966, "Total": 18978.5}, {"name": "Paul", "year": 1967, "Total": 19168.5}, {"name": "Paul", "year": 1968, "Total": 18531.0}, {"name": "Paul", "year": 1969, "Total": 16884.0}, {"name": "Paul", "year": 1970, "Total": 17193.0}, {"name": "Paul", "year": 1971, "Total": 13902.0}, {"name": "Paul", "year": 1972, "Total": 13123.5}, {"name": "Paul", "year": 1973, "Total": 11327.5}, {"name": "Paul", "year": 1974, "Total": 9951.5}, {"name": "Paul", "year": 1975, "Total": 9554.0}, {"name": "Paul", "year": 1976, "Total": 9980.0}, {"name": "Paul", "year": 1977, "Total": 10191.0}, {"name": "Paul", "year": 1978, "Total": 9725.5}, {"name": "Paul", "year": 1979, "Total": 10428.5}, {"name": "Paul", "year": 1980, "Total": 10898.5}, {"name": "Paul", "year": 1981, "Total": 10694.5}, {"name": "Paul", "year": 1982, "Total": 9129.5}, {"name": "Paul", "year": 1983, "Total": 8733.0}, {"name": "Paul", "year": 1984, "Total": 9284.5}, {"name": "Paul", "year": 1985, "Total": 8774.5}, {"name": "Paul", "year": 1986, "Total": 8454.0}, {"name": "Paul", "year": 1987, "Total": 8112.0}, {"name": "Paul", "year": 1988, "Total": 8238.0}, {"name": "Paul", "year": 1989, "Total": 7494.5}, {"name": "Paul", "year": 1990, "Total": 7705.5}, {"name": "Paul", "year": 1991, "Total": 7150.5}, {"name": "Paul", "year": 1992, "Total": 6522.0}, {"name": "Paul", "year": 1993, "Total": 6477.0}, {"name": "Paul", "year": 1994, "Total": 5796.0}, {"name": "Paul", "year": 1995, "Total": 5413.0}, {"name": "Paul", "year": 1996, "Total": 4879.0}, {"name": "Paul", "year": 1997, "Total": 4748.0}, {"name": "Paul", "year": 1998, "Total": 4319.0}, {"name": "Paul", "year": 1999, "Total": 4015.0}, {"name": "Paul", "year": 2000, "Total": 3786.0}, {"name": "Peter", "year": 1910, "Total": 578.0}, {"name": "Peter", "year": 1911, "Total": 793.0}, {"name": "Peter", "year": 1912, "Total": 1647.0}, {"name": "Peter", "year": 1913, "Total": 1903.0}, {"name": "Peter", "year": 1914, "Total": 2604.0}, {"name": "Peter", "year": 1915, "Total": 2993.5}, {"name": "Peter", "year": 1916, "Total": 3359.0}, {"name": "Peter", "year": 1917, "Total": 3452.0}, {"name": "Peter", "year": 1918, "Total": 3698.0}, {"name": "Peter", "year": 1919, "Total": 3358.0}, {"name": "Peter", "year": 1920, "Total": 3479.0}, {"name": "Peter", "year": 1921, "Total": 3530.0}, {"name": "Peter", "year": 1922, "Total": 3143.5}, {"name": "Peter", "year": 1923, "Total": 3403.0}, {"name": "Peter", "year": 1924, "Total": 3510.0}, {"name": "Peter", "year": 1925, "Total": 3369.0}, {"name": "Peter", "year": 1926, "Total": 3355.0}, {"name": "Peter", "year": 1927, "Total": 2883.0}, {"name": "Peter", "year": 1928, "Total": 2858.5}, {"name": "Peter", "year": 1929, "Total": 3201.0}, {"name": "Peter", "year": 1930, "Total": 3251.0}, {"name": "Peter", "year": 1931, "Total": 3093.0}, {"name": "Peter", "year": 1932, "Total": 2694.5}, {"name": "Peter", "year": 1933, "Total": 3120.0}, {"name": "Peter", "year": 1934, "Total": 2865.0}, {"name": "Peter", "year": 1935, "Total": 3413.0}, {"name": "Peter", "year": 1936, "Total": 3706.0}, {"name": "Peter", "year": 1937, "Total": 3283.5}, {"name": "Peter", "year": 1938, "Total": 4289.0}, {"name": "Peter", "year": 1939, "Total": 4633.0}, {"name": "Peter", "year": 1940, "Total": 5039.0}, {"name": "Peter", "year": 1941, "Total": 5608.0}, {"name": "Peter", "year": 1942, "Total": 6582.0}, {"name": "Peter", "year": 1943, "Total": 5920.0}, {"name": "Peter", "year": 1944, "Total": 5450.0}, {"name": "Peter", "year": 1945, "Total": 5604.0}, {"name": "Peter", "year": 1946, "Total": 6449.0}, {"name": "Peter", "year": 1947, "Total": 8591.0}, {"name": "Peter", "year": 1948, "Total": 8050.0}, {"name": "Peter", "year": 1949, "Total": 7180.0}, {"name": "Peter", "year": 1950, "Total": 8366.0}, {"name": "Peter", "year": 1951, "Total": 9004.0}, {"name": "Peter", "year": 1952, "Total": 9581.0}, {"name": "Peter", "year": 1953, "Total": 8561.0}, {"name": "Peter", "year": 1954, "Total": 10073.0}, {"name": "Peter", "year": 1955, "Total": 9689.5}, {"name": "Peter", "year": 1956, "Total": 11321.0}, {"name": "Peter", "year": 1957, "Total": 10284.5}, {"name": "Peter", "year": 1958, "Total": 9555.0}, {"name": "Peter", "year": 1959, "Total": 10028.5}, {"name": "Peter", "year": 1960, "Total": 9545.0}, {"name": "Peter", "year": 1961, "Total": 9225.5}, {"name": "Peter", "year": 1962, "Total": 9577.0}, {"name": "Peter", "year": 1963, "Total": 8571.5}, {"name": "Peter", "year": 1964, "Total": 9907.0}, {"name": "Peter", "year": 1965, "Total": 8364.5}, {"name": "Peter", "year": 1966, "Total": 7626.5}, {"name": "Peter", "year": 1967, "Total": 8087.0}, {"name": "Peter", "year": 1968, "Total": 8133.0}, {"name": "Peter", "year": 1969, "Total": 7170.0}, {"name": "Peter", "year": 1970, "Total": 6854.0}, {"name": "Peter", "year": 1971, "Total": 5995.5}, {"name": "Peter", "year": 1972, "Total": 6479.0}, {"name": "Peter", "year": 1973, "Total": 5918.0}, {"name": "Peter", "year": 1974, "Total": 5128.5}, {"name": "Peter", "year": 1975, "Total": 5707.0}, {"name": "Peter", "year": 1976, "Total": 4721.0}, {"name": "Peter", "year": 1977, "Total": 5323.0}, {"name": "Peter", "year": 1978, "Total": 5425.5}, {"name": "Peter", "year": 1979, "Total": 6076.0}, {"name": "Peter", "year": 1980, "Total": 5296.0}, {"name": "Peter", "year": 1981, "Total": 5551.0}, {"name": "Peter", "year": 1982, "Total": 5611.0}, {"name": "Peter", "year": 1983, "Total": 4760.5}, {"name": "Peter", "year": 1984, "Total": 4743.5}, {"name": "Peter", "year": 1985, "Total": 5285.5}, {"name": "Peter", "year": 1986, "Total": 5018.0}, {"name": "Peter", "year": 1987, "Total": 5161.0}, {"name": "Peter", "year": 1988, "Total": 5042.5}, {"name": "Peter", "year": 1989, "Total": 4620.5}, {"name": "Peter", "year": 1990, "Total": 4866.5}, {"name": "Peter", "year": 1991, "Total": 4956.0}, {"name": "Peter", "year": 1992, "Total": 3934.5}, {"name": "Peter", "year": 1993, "Total": 4532.0}, {"name": "Peter", "year": 1994, "Total": 3928.5}, {"name": "Peter", "year": 1995, "Total": 3817.5}, {"name": "Peter", "year": 1996, "Total": 4069.0}, {"name": "Peter", "year": 1997, "Total": 3821.0}, {"name": "Peter", "year": 1998, "Total": 3377.0}, {"name": "Peter", "year": 1999, "Total": 3430.0}, {"name": "Peter", "year": 2000, "Total": 3137.0}]}}, {"mode": "vega-lite"});
+</script>
+</div>
 </div>
 <p><em>include figures in chunks and discuss your findings in the figure.</em></p>
 <div class="cell" data-execution_count="10">
 <details>
 <summary>plot example</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>alt.Chart(dat.head(<span class="dv">200</span>))<span class="op">\</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    .encode(x <span class="op">=</span> <span class="st">&quot;name&quot;</span>, y <span class="op">=</span> <span class="st">&quot;AK&quot;</span>)<span class="op">\</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    .mark_bar()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>alt.Chart(dat.head(<span class="dv">200</span>))<span class="op">\</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    .encode(x <span class="op">=</span> <span class="st">&quot;name&quot;</span>, y <span class="op">=</span> <span class="st">&quot;AK&quot;</span>)<span class="op">\</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    .mark_bar()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>C:\Users\Spencer\AppData\Roaming\Python\Python311\site-packages\altair\utils\core.py:410: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
@@ -3496,22 +3581,22 @@ position: relative;
 <div id="q3-chart" class="cell-output cell-output-display" data-execution_count="10">
 
 <style>
-#altair-viz-23714f5a6a4a4aeb9fc812f138181bf1.vega-embed {
+#altair-viz-0ba81bc5b0b04f6b9be8a1630fe21668.vega-embed {
 width: 100%;
 display: flex;
 }
-#altair-viz-23714f5a6a4a4aeb9fc812f138181bf1.vega-embed details,
-#altair-viz-23714f5a6a4a4aeb9fc812f138181bf1.vega-embed details summary {
+#altair-viz-0ba81bc5b0b04f6b9be8a1630fe21668.vega-embed details,
+#altair-viz-0ba81bc5b0b04f6b9be8a1630fe21668.vega-embed details summary {
 position: relative;
 }
 </style>
-<div id="altair-viz-23714f5a6a4a4aeb9fc812f138181bf1"></div>
+<div id="altair-viz-0ba81bc5b0b04f6b9be8a1630fe21668"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-23714f5a6a4a4aeb9fc812f138181bf1") {
-      outputDiv = document.getElementById("altair-viz-23714f5a6a4a4aeb9fc812f138181bf1");
+    if (outputDiv.id !== "altair-viz-0ba81bc5b0b04f6b9be8a1630fe21668") {
+      outputDiv = document.getElementById("altair-viz-0ba81bc5b0b04f6b9be8a1630fe21668");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -3565,15 +3650,15 @@ position: relative;
 <div class="cell tbl-cap-location-top" data-execution_count="11">
 <details>
 <summary>table example</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>mydat <span class="op">=</span> dat.head(<span class="dv">1000</span>)<span class="op">\</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">&#39;year&#39;</span>)<span class="op">\</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">sum</span>()<span class="op">\</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    .reset_index()<span class="op">\</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    .tail(<span class="dv">10</span>)<span class="op">\</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>([<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AK&quot;</span>,<span class="st">&quot;AR&quot;</span>])</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>display(mydat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>mydat <span class="op">=</span> dat.head(<span class="dv">1000</span>)<span class="op">\</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">&#39;year&#39;</span>)<span class="op">\</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">sum</span>()<span class="op">\</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    .reset_index()<span class="op">\</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    .tail(<span class="dv">10</span>)<span class="op">\</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>([<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AK&quot;</span>,<span class="st">&quot;AR&quot;</span>])</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>display(mydat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="q3-table" class="cell-output cell-output-display">
 <div>
@@ -3659,9 +3744,9 @@ position: relative;
 </section>
 <section id="appendix-a-all-python-code" class="level2">
 <h2 class="anchored" data-anchor-id="appendix-a-all-python-code">APPENDIX A (All Python Code)</h2>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#paste other your code from your python file (.py) here</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#the code snippets above should be just enough code to display the chart or table needed for the question or task</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#the appendix should have all the code, and it should be well `commented`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#paste other your code from your python file (.py) here</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#the code snippets above should be just enough code to display the chart or table needed for the question or task</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">#the appendix should have all the code, and it should be well `commented`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 
 </main>
